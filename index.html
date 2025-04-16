@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop For Of</title>
+</head>
+<body>
+    <script>
+        // Passo 1: Cria r uma lista vazia para guardar os nomes
+let nomes = [];
+
+// Passo 2: Usar while(true) para pedir nomes
+while (true) {
+    let nome = prompt("Digite seu nome (ou digitwe 'sair' para parar):");
+
+    //Verificar se o usuári quer sair
+    if (nome.toLowerCase() === "sair") {
+        break; // Sai do loop
+    }
+
+    //Adiciona o nome na lista
+    nomes.push(nome);
+}
+
+// Passo 3: Mostrar os nomes com numeração usando "for"
+for (let i = 0; i < nomes.length; i++) {
+    console.log((i + 1) + ": " + nomes[i] );
+}
+
+//Passo 4: Usar "for...of" para mostrar uma mensagem para cada nome
+for (let nome of nomes) {
+    console.log("Bem vindo(a), " + nome + "!");
+}
+    </script>
+</body>
+
+</html>
